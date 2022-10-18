@@ -25,18 +25,21 @@ df = pd.read_csv(getPathInStreamlitDir() / str('data/IRIS.csv'))
 
 st.dataframe(df)
 
-'''
-This was the key to be able to get to files with the same line of code in Deepnote and Streamlit
+st.text('This was the key to be able to get to files with the same line of code in Deepnote and Streamlit')
 
+st.code('''
 print(Path(__file__).parents)
 print(Path(__file__).parents[0])
 print(Path(__file__).parents[1])
 print(Path(__file__).parents[2])
 print(Path(__file__).parents[3])
+''')
 
+st.text('Results in:')
+st.code('''
 <PosixPath.parents>
 /work/Streamlit_demo/For_github/streamlit
 /work/Streamlit_demo/For_github
 /work/Streamlit_demo
 /work
-'''
+''')
