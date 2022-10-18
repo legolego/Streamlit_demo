@@ -36,6 +36,10 @@ git branch -M main
 git remote add origin https://github.com/legolego/Streamlit_demo.git
 ```
 
+### Deepnote file structure
+
+![Deepnote file structure](./streamlit/assets/Deepnote_file_structure.png "Deepnote file structure")
+
 ## Help
 
 Any advise for common problems or issues.
