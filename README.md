@@ -1,11 +1,17 @@
 # Project Title
 
-COnnecting to Streamlit from Deepnote
+Example connecting to Streamlit cloud from Deepnote
 
 ## Description
 
 This will use a single, shared requirements.txt file. It will be shared between Deepnote, through the init file, and Streamlit, which requires it to load libraries it needs.
+One problem this was made to show was how to reference a file in both Deepnote ans Streamlit, this line of code was key
 
+```
+Path(__file__).parents[1]
+```
+
+It lives online here: https://legolego-streamlit-demo-streamlitdemo-un56xj.streamlitapp.com/
 ## Getting Started
 
 ### Dependencies
@@ -22,6 +28,7 @@ This will use a single, shared requirements.txt file. It will be shared between 
 
 * How to run the program
 * Step-by-step bullets
+* https://legolego-streamlit-demo-streamlitdemo-un56xj.streamlitapp.com/
 ```
 git init
 git add *
