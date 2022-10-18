@@ -14,7 +14,7 @@ def getPathInStreamlitDir():
 st.title('This is a test of Streamlit cloud from Deepnote through Github')
 
 img_name = 'test-pattern.png'
-img_path = getPathInStreamlitDir() / str('assets/' + img_name)
+img_path = getPathInStreamlitDir() / str('Assets/' + img_name)
 image = Image.open(img_path)
 st.image(image)
 
@@ -75,7 +75,13 @@ st.markdown('With the following values in Deepnote:')
 st.code('''/work/Streamlit_demo/For_github/streamlit/assets/test-pattern.png
 /work/Streamlit_demo/For_github/streamlit/data/IRIS.csv''')
 
-st.text("Now let's make an Altair plot for fun.")
+st.markdown("and the following values in Streamlit's hosted environment:")
+st.code('''/app/streamlit_demo/streamlit/assets/test-pattern.png
+/app/streamlit_demo/streamlit/data/IRIS.csv''')
+
+st.markdown('Note the lowercase names in Streamlit')
+
+st.text("Now let's make an Altair plot for another example.")
 
 plot = alt.Chart(df_iris).mark_point().encode(
   # Map the sepalLength to x-axis
