@@ -22,6 +22,24 @@ It lives online here: https://legolego-streamlit-demo-streamlitdemo-un56xj.strea
 ### Installing
 
 * Just clone this or copy/paste :)
+* This text can be pasted into a new Deepnote file with .ipynb extension:
+```{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "import os"
+   ]
+  }
+ ],
+ "nbformat": 4,
+ "nbformat_minor": 5,
+ "metadata": {}
+}
+```
+Once created, click to a different file, then back to this one, and it should(as of 10/18/2022) be recognized as a jupyter notebook.
+More information from Deepnote is here: https://deepnote.com/docs/notebooks
 
 ### Executing program
 
