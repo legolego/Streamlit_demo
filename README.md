@@ -1,6 +1,5 @@
-# Project Title
+# Example connecting to Streamlit cloud from Deepnote through Github
 
-Example connecting to Streamlit cloud from Deepnote
 
 ## Description
 

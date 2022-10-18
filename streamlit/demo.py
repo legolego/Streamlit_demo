@@ -20,7 +20,8 @@ st.image(image)
 
 
 st.markdown('''This example was created to show how to reference file locations with the same line of code from both the Deepnote environment
-and the Streamlit cloud.''')
+and the Streamlit cloud. You can see the file structure in Github: 
+[https://github.com/legolego/Streamlit_demo](https://github.com/legolego/Streamlit_demo)''')
 
 st.markdown('''The test image above lives is in `streamlit/assets`.''')
 
@@ -34,33 +35,35 @@ df_iris = pd.read_csv(csv_path)
 
 st.dataframe(df_iris)
 
-st.text('This was the key to be able to get to files with the same line of code in Deepnote and Streamlit')
+st.markdown('''```from pathlib import Path``` was used to reference the file structure in both environments. 
+This was the key to be able to get to files with the same line of code in Deepnote and Streamlit. Below are some examples, and notice
+```Path(__file__).parents[1]``` ''')
 
 st.code('''
 print(Path(__file__).parents)
 print(Path(__file__).parents[0])
-print(Path(__file__).parents[1])
+print(Path(__file__).parents[1])  // <-- this line
 print(Path(__file__).parents[2])
 print(Path(__file__).parents[3])
 ''')
 
-st.text('Results in:')
+st.text('The code above results in:')
 st.code('''
 <PosixPath.parents>
 /work/Streamlit_demo/For_github/streamlit
-/work/Streamlit_demo/For_github
+/work/Streamlit_demo/For_github    // <-- this result
 /work/Streamlit_demo
 /work
 ''')
 
-st.markdown('So I made a function to bring back the root of the path I needed inside the `streamlit` folder.')
+st.markdown('A function was made to bring back the root of the path needed inside the `streamlit` folder.')
 
 st.code('''
 def getPathInStreamlitDir():
     return Path(__file__).parents[1] / str('streamlit/')
     ''')
 
-st.markdown('The full paths for the image and csv are:')
+st.markdown('The full paths for the image and csv are in the following variables:')
 
 st.code('''
 img_path = getPathInStreamlitDir() / str('assets/' + img_name)
@@ -78,5 +81,3 @@ plot = alt.Chart(df_iris).mark_point().encode(
 )
 
 st.altair_chart(plot)
-
-st.markdown("The code for this page lives here: [https://github.com/legolego/Streamlit_demo](https://github.com/legolego/Streamlit_demo)")
