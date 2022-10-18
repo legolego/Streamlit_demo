@@ -87,5 +87,5 @@ plot = alt.Chart(df_iris).mark_point().encode(
 
 st.altair_chart(plot)
 
-print(img_path)
-print(csv_path)
+st.text(img_path)
+st.text(csv_path)
