@@ -22,7 +22,7 @@ It lives online here: https://legolego-streamlit-demo-streamlitdemo-un56xj.strea
 ### Installing
 
 * Just clone this or copy/paste :)
-* This text can be pasted into a new Deepnote file with .ipynb extension:
+* This text can be pasted into a new Deepnote file with **.ipynb** extension:
 ```{
  "cells": [
   {

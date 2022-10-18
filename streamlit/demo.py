@@ -21,7 +21,8 @@ st.image(image)
 
 st.markdown('''This example was created to show how to reference file locations with the same line of code from both the Deepnote environment
 and the Streamlit cloud. You can see the file structure in Github: 
-[https://github.com/legolego/Streamlit_demo](https://github.com/legolego/Streamlit_demo)''')
+[https://github.com/legolego/Streamlit_demo](https://github.com/legolego/Streamlit_demo)
+with instructions in the README.''')
 
 st.markdown('''The test image above lives is in `streamlit/assets`.''')
 
@@ -70,6 +71,10 @@ img_path = getPathInStreamlitDir() / str('assets/' + img_name)
 csv_path = getPathInStreamlitDir() / str('data/IRIS.csv')
 ''')
 
+st.markdown('With the following values in Deepnote:')
+st.code('''/work/Streamlit_demo/For_github/streamlit/assets/test-pattern.png
+/work/Streamlit_demo/For_github/streamlit/data/IRIS.csv''')
+
 st.text("Now let's make an Altair plot for fun.")
 
 plot = alt.Chart(df_iris).mark_point().encode(
@@ -81,3 +86,6 @@ plot = alt.Chart(df_iris).mark_point().encode(
 )
 
 st.altair_chart(plot)
+
+print(img_path)
+print(csv_path)
