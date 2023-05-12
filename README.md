@@ -12,7 +12,7 @@ This repo was made to show was how to reference a file in both Deepnote ans Stre
 ![Deepnote file structure](./streamlit/assets/Deepnote_file_struct.png "Deepnote file structure")
 
 
-For referencing files, this line of code was key
+For referencing files, this line of code was key:
 
 ```
 Path(__file__).parents[1]
